@@ -31,8 +31,15 @@ public class Movement : MonoBehaviour
         //Check for a match with the specified name on any GameObject that collides with your GameObject
         if (collision.gameObject.tag == "Door")
         {
-            Debug.Log("Hello");
             SceneManager.LoadScene("Room");
+        }
+        if (collision.gameObject.tag == "DoorInside")
+        {
+            SceneManager.LoadScene("Level 1");
+        }
+        if (collision.gameObject.tag == "CityEntrance")
+        {
+            SceneManager.LoadScene("Level 2");
         }
     }
 }
