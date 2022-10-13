@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2135437117, guid: 3484d24bab35458409435120ff177fe7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104,6 +104,7 @@ MonoBehaviour:
   rb1: {fileID: 3492481497901085596}
   movement: {x: 0, y: 0}
   animator: {fileID: 3492481497901085595}
+  player: {fileID: 3492481497901085569}
 --- !u!50 &3492481497901085596
 Rigidbody2D:
   serializedVersion: 4
