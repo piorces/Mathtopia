@@ -13,7 +13,7 @@ public class CameraMovement : MonoBehaviour
 
     private void Awake()
     {
-//        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this);
     }
     
     void Update()
