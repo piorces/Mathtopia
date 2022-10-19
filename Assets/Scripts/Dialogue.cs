@@ -20,7 +20,7 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)) {
+        if(Input.GetMouseButtonDown(0) && Time.timeScale != 0f) {
             if (textComponent.text == lines[index]) {
                 NextLine();
             }

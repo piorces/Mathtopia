@@ -23,6 +23,12 @@ public class Movement : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    private void Start()
+    {
+        currentPos.x = -1.4f;
+        currentPos.y = 2.5f;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -40,7 +46,7 @@ public class Movement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         //Check for a match with the specified name on any GameObject that collides with your GameObject
-        if (collision.gameObject.tag == "Door")
+        if (collision.gameObject.tag == "HouseDoor")
         {
             currentPos.x = player.transform.position.x;
             currentPos.y = player.transform.position.y -1;

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pMenu;
@@ -10,7 +10,6 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this);
         pMenu.SetActive(false);
     }
 
@@ -38,5 +37,9 @@ public class PauseMenu : MonoBehaviour
         pMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
