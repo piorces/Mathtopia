@@ -230,7 +230,7 @@ MonoBehaviour:
   - Move with the arrows keys!
   - Pause with Escape!
   - Try to enter your house!
-  textSpeed: 0.2
+  textSpeed: 0.1
 --- !u!1 &1860973081
 GameObject:
   m_ObjectHideFlags: 0

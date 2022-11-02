@@ -2635,7 +2635,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1308999119, guid: 142997f92bfa2aa46a6ba584308fba53, type: 3}
       propertyPath: textSpeed
-      value: 0.2
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1308999119, guid: 142997f92bfa2aa46a6ba584308fba53, type: 3}
       propertyPath: lines.Array.data[2]
