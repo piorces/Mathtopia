@@ -2458,6 +2458,10 @@ PrefabInstance:
       propertyPath: lines.Array.data[2]
       value: Try to exit your house by moving downwards!
       objectReference: {fileID: 0}
+    - target: {fileID: 4483400389096962473, guid: dde6c63280b8dc9469475ca48df27c5a, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4483400389096962476, guid: dde6c63280b8dc9469475ca48df27c5a, type: 3}
       propertyPath: m_Name
       value: Dialogue
@@ -2551,7 +2555,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
     - target: {fileID: 4483400389618660986, guid: dde6c63280b8dc9469475ca48df27c5a, type: 3}
+      propertyPath: lines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483400389618660986, guid: dde6c63280b8dc9469475ca48df27c5a, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: Move with the arrow keys or WASD.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483400389618660986, guid: dde6c63280b8dc9469475ca48df27c5a, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: You can talk to people and use objects by pressing E.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483400389618660986, guid: dde6c63280b8dc9469475ca48df27c5a, type: 3}
       propertyPath: lines.Array.data[2]
+      value: Pause the game with Escape.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483400389618660986, guid: dde6c63280b8dc9469475ca48df27c5a, type: 3}
+      propertyPath: lines.Array.data[3]
       value: Try to exit your house!
       objectReference: {fileID: 0}
     m_RemovedComponents:

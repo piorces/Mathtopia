@@ -8,7 +8,7 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
-    private int index;
+    public int index;
     [SerializeField]
     public AudioClip _clip;
 
