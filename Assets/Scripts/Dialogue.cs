@@ -9,6 +9,8 @@ public class Dialogue : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     private int index;
+    [SerializeField]
+    public AudioClip _clip;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,9 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine() {
         foreach (char c in lines[index].ToCharArray()) {
+            
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
