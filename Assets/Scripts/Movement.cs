@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     private Vector2 currentPos;
     public TextMeshProUGUI keyText;
     private float keysCounter = 0;
+    public GameObject exclamation;
 
     private void Awake()
     {
@@ -32,11 +33,15 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+
+        if(Input.GetKeyDown(KeyCode.E))
+            CheckInteraction();
 
     }
     void FixedUpdate()
@@ -73,5 +78,18 @@ public class Movement : MonoBehaviour
             SceneManager.LoadScene("Level 1");
             player.transform.position = currentPos;
         }
+    }
+
+    public void OpenInteractableIcon() {
+
+        exclamation.SetActive(true);
+    }
+
+    public void CloseInteractableIcon() {
+        exclamation.SetActive(false);
+    }
+
+    private void CheckInteraction() {
+
     }
 }
