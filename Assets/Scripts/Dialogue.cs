@@ -34,6 +34,7 @@ public class Dialogue : MonoBehaviour
     }
 
     void StartDialogue() {
+        gameObject.SetActive(true);
         index = 0;
         StartCoroutine(TypeLine());
 

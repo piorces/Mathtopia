@@ -18,8 +18,8 @@ public class BattleMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        battleMenu.SetActive(true);
-        timerIsRunning = true;
+        battleMenu.SetActive(false);
+        timerIsRunning = false;
     }
     // Update is called once per frame
     void Update()
