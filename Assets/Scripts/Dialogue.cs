@@ -33,7 +33,7 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    void StartDialogue() {
+    public void StartDialogue() {
         gameObject.SetActive(true);
         index = 0;
         StartCoroutine(TypeLine());
