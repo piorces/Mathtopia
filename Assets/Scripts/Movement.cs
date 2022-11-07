@@ -78,10 +78,11 @@ public class Movement : MonoBehaviour
             SceneManager.LoadScene("Level 1");
             player.transform.position = currentPos;
         }
+
+        
     }
 
     public void OpenInteractableIcon() {
-
         exclamation.SetActive(true);
     }
 

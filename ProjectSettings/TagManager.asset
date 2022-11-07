@@ -9,6 +9,7 @@ TagManager:
   - cityEntranceReturning
   - HouseDoor
   - redKid
+  - npc
   layers:
   - Default
   - TransparentFX
