@@ -15,8 +15,8 @@ public class Movement : MonoBehaviour
     public Animator animator;
     public GameObject player;
     private Vector2 currentPos;
-    public TextMeshProUGUI keyText;
-    private float keysCounter = 0;
+    
+    
 
     private void Awake()
     {
@@ -52,8 +52,7 @@ public class Movement : MonoBehaviour
             currentPos.y = player.transform.position.y -1;
             SceneManager.LoadScene("Room");
             player.transform.position = new Vector2(0, -3);
-            keysCounter++;
-            keyText.text = keysCounter.ToString();
+            
 
         }
         if (collision.gameObject.tag == "DoorInside")

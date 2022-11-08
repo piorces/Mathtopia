@@ -34,7 +34,7 @@ public class CameraMovement : MonoBehaviour
         else if (currentScene.name == "Level 2")
         {
             gameObject.GetComponent<Camera>().orthographicSize = 10;
-            transform.position = new Vector3(Mathf.Clamp(player.position.x, -15, 13), Math.Clamp(player.position.y, 0.2f, 9.8f), -10);
+            transform.position = new Vector3(Mathf.Clamp(player.position.x, -14.66f, 12.60f), Math.Clamp(player.position.y, 0.2f, 9.8f), -10);
 
         }
         

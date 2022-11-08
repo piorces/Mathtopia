@@ -9,6 +9,8 @@ TagManager:
   - cityEntranceReturning
   - HouseDoor
   - redKid
+  - yellowKid
+  - Farmer
   layers:
   - Default
   - TransparentFX

@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -1.1122, y: 0.0006866455}
+  m_SizeDelta: {x: 457.3483, y: 105.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &954359109
 CanvasRenderer:
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -172,8 +172,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 424, y: 65.16}
+  m_AnchoredPosition: {x: 9, y: 82}
+  m_SizeDelta: {x: 481.7948, y: 105.1718}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1308999121
 CanvasRenderer:
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.90588236}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -229,8 +229,8 @@ MonoBehaviour:
   lines:
   - Move with the arrows keys!
   - Pause with Escape!
-  - Try to enter your house!
-  textSpeed: 0.2
+  - Try to exit your house!
+  textSpeed: 0.04
 --- !u!1 &1860973081
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7682198122949816268}
   - component: {fileID: 7682198122949816267}
+  - component: {fileID: 1667860983}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -380,6 +381,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pMenu: {fileID: 9065598918870068037}
   isPaused: 0
+--- !u!114 &1667860983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7682198122949816266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ce13f65d9d8f746aa40043180e1dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &694382119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -387,6 +400,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7682198122949816268}
     m_Modifications:
+    - target: {fileID: 9065598917912709801, guid: 7be25c7f95fdd1c4bab818f8c19e8201, type: 3}
+      propertyPath: m_text
+      value: Quit Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065598918444254561, guid: 7be25c7f95fdd1c4bab818f8c19e8201, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0024414062
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065598918766810492, guid: 7be25c7f95fdd1c4bab818f8c19e8201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065598918766810492, guid: 7be25c7f95fdd1c4bab818f8c19e8201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065598918766810492, guid: 7be25c7f95fdd1c4bab818f8c19e8201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7682198122949816267}
+    - target: {fileID: 9065598918766810492, guid: 7be25c7f95fdd1c4bab818f8c19e8201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065598918766810492, guid: 7be25c7f95fdd1c4bab818f8c19e8201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065598918766810492, guid: 7be25c7f95fdd1c4bab818f8c19e8201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065598918766810492, guid: 7be25c7f95fdd1c4bab818f8c19e8201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9065598918766810493, guid: 7be25c7f95fdd1c4bab818f8c19e8201, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -199.99487
