@@ -9,7 +9,10 @@ TagManager:
   - cityEntranceReturning
   - HouseDoor
   - redKid
-  - npc
+  - yellowKid
+  - Farmer
+  - SchoolEntrance
+  - ClassroomDoorInside
   layers:
   - Default
   - TransparentFX

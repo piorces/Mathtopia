@@ -15,9 +15,9 @@ public class Movement : MonoBehaviour
     public Animator animator;
     public GameObject player;
     private Vector2 currentPos;
-    public TextMeshProUGUI keyText;
-    private float keysCounter = 0;
-    public GameObject exclamation;
+    public BattleMenu battleMenu;
+    
+    
 
     private void Awake()
     {
@@ -33,15 +33,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-
-        if(Input.GetKeyDown(KeyCode.E))
-            CheckInteraction();
 
     }
     void FixedUpdate()
@@ -57,16 +53,13 @@ public class Movement : MonoBehaviour
             currentPos.y = player.transform.position.y -1;
             SceneManager.LoadScene("Room");
             player.transform.position = new Vector2(0, -3);
-            keysCounter++;
-            keyText.text = keysCounter.ToString();
-
         }
         if (collision.gameObject.tag == "DoorInside")
         {
             SceneManager.LoadScene("Level 1");
             player.transform.position = currentPos;
         }
-        if (collision.gameObject.tag == "CityEntrance")
+        if (collision.gameObject.tag == "CityEntrance" && battleMenu.keysCounter == 3)
         {
             currentPos.x = player.transform.position.x - 1;
             currentPos.y = player.transform.position.y;
@@ -78,19 +71,17 @@ public class Movement : MonoBehaviour
             SceneManager.LoadScene("Level 1");
             player.transform.position = currentPos;
         }
-
-        
-    }
-
-    public void OpenInteractableIcon() {
-        exclamation.SetActive(true);
-    }
-
-    public void CloseInteractableIcon() {
-        exclamation.SetActive(false);
-    }
-
-    private void CheckInteraction() {
-
+        if (collision.gameObject.tag == "SchoolEntrance")
+        {
+            currentPos.x = player.transform.position.x;
+            currentPos.y = player.transform.position.y - 1;
+            SceneManager.LoadScene("Classroom");
+            player.transform.position = new Vector2(-4f, -1.7f);
+        }
+        if (collision.gameObject.tag == "ClassroomDoorInside")
+        {
+            SceneManager.LoadScene("Level 2");
+            player.transform.position = currentPos;
+        }
     }
 }

@@ -8,9 +8,7 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
-    public int index;
-    [SerializeField]
-    public AudioClip _clip;
+    private int index;
 
     // Start is called before the first frame update
     void Start()
@@ -33,8 +31,7 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    public void StartDialogue() {
-        gameObject.SetActive(true);
+    void StartDialogue() {
         index = 0;
         StartCoroutine(TypeLine());
 
@@ -42,9 +39,6 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine() {
         foreach (char c in lines[index].ToCharArray()) {
-            
-            AudioSource audio = GetComponent<AudioSource>();
-            audio.Play();
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
